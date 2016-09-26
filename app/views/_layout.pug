@@ -2,7 +2,20 @@ doctype html
 html
     head
         meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
         title LexLauncher
+
+        link(rel='stylesheet', href='../bower_components/materialize/dist/css/materialize.min.css')
+        link(rel='stylesheet', href='assets/css/launcher.css')
     body
-        block content
+        main
+            block content
+
+        include _footer
+
+        script(src='../bower_components/jquery/dist/jquery.min.js')
+        script
+            | window.$ = window.jQuery = require('../bower_components/jquery/dist/jquery.min.js');
+        script(src='../bower_components/materialize/dist/js/materialize.min.js')
+        script(src='assets/js/application.js')

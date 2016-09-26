@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/osx,linux,windows,node,visualstudiocode
+# Created by https://www.gitignore.io/api/osx,linux,windows,node,bower,visualstudiocode
 
 ### OSX ###
 *.DS_Store
@@ -112,6 +112,13 @@ jspm_packages
 
 # Output of 'npm pack'
 *.tgz
+
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
 
 
 ### VisualStudioCode ###

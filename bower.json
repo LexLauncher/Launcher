@@ -1,0 +1,21 @@
+{
+  "name": "lexlauncher",
+  "description": "A Minecraft launcher designed to be compatible with Mojang's own while still providing fantastic modpack support.",
+  "main": "launcher.js",
+  "authors": [
+    "Jamie Mansfield"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/LexLauncher/Launcher",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7"
+  }
+}
