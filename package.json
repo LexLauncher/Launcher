@@ -15,9 +15,11 @@
   },
   "homepage": "https://github.com/LexLauncher/Launcher",
   "devDependencies": {
+    "electron": "^1.4.1",
     "gulp": "^3.9.1",
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.5.2",
     "gulp-typescript": "^3.0.1",
     "typescript": "^2.0.3"
   }

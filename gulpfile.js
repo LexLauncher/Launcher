@@ -1,7 +1,8 @@
-var gulp = require('gulp'),
-    pug  = require('gulp-pug'),
-    sass = require('gulp-sass'),
-    ts   = require('gulp-typescript')
+var gulp  = require('gulp'),
+    pug   = require('gulp-pug'),
+    sass  = require('gulp-sass'),
+    ts    = require('gulp-typescript'),
+    shell = require('gulp-shell')
 
 var tsProject = ts.createProject('tsconfig.json')
 var path = {
@@ -42,3 +43,7 @@ gulp.task('watch', ['build'], function() {
     gulp.watch('app/scss/**/*.scss', ['scss'])
     gulp.watch(path.scripts,         ['compile'])
 })
+
+gulp.task('run', ['watch'], shell.task([
+    'electron .'
+]))
