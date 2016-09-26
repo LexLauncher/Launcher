@@ -1,7 +1,8 @@
 {
   "name": "lexlauncher",
+  "private": false,
   "version": "1.0.0",
-  "description": "A Minecraft launcher, built with compatibility with Mojang's own in mind.",
+  "description": "A Minecraft launcher designed to be compatible with Mojang's own while still providing fantastic modpack support.",
   "main": "launcher.js",
   "repository": {
     "type": "git",
@@ -12,5 +13,12 @@
   "bugs": {
     "url": "https://github.com/LexLauncher/Launcher/issues"
   },
-  "homepage": "https://github.com/LexLauncher/Launcher"
+  "homepage": "https://github.com/LexLauncher/Launcher",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.0.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-typescript": "^3.0.1",
+    "typescript": "^2.0.3"
+  }
 }
