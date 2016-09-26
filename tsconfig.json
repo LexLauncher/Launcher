@@ -1,6 +1,8 @@
 {
     "files": [
-        "app/src/application.ts"
+        "app/src/application.ts",
+        "app/src/utils.ts",
+        "typings/index.d.ts"
     ],
     "compilerOptions": {
         "noImplicitAny": true,

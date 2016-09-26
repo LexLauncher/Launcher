@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/osx,linux,windows,node,bower,visualstudiocode
+# Created by https://www.gitignore.io/api/osx,linux,windows,node,bower,visualstudiocode,typings
 
 ### OSX ###
 *.DS_Store
@@ -126,6 +126,12 @@ bower_components
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
+
+
+
+### Typings ###
+## Ignore downloaded typings
+typings
 
 
 ### LexLauncher ###
