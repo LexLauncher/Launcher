@@ -34,4 +34,18 @@ namespace OperatingSystem {
         }
     }
 
+    /**
+     * Gets the Minecraft data directory.
+     */
+    export function getMinecraftDataDirectory() {
+        switch (OperatingSystem.getOS()) {
+            case OperatingSystem.WINDOWS:
+                return process.env['APPDATA'] + '/.minecraft';
+            case OperatingSystem.MACOS:
+                return os.homedir() + '/Library/Application Support/minecraft';
+            default:
+                return os.homedir() + '/minecraft';
+        }
+    }
+
 }
