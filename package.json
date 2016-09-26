@@ -1,0 +1,16 @@
+{
+  "name": "lexlauncher",
+  "version": "1.0.0",
+  "description": "A Minecraft launcher, built with compatibility with Mojang's own in mind.",
+  "main": "launcher.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LexLauncher/Launcher.git"
+  },
+  "author": "Jamie Mansfield",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LexLauncher/Launcher/issues"
+  },
+  "homepage": "https://github.com/LexLauncher/Launcher"
+}
