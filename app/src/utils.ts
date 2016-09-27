@@ -1,6 +1,6 @@
 import os = require('os')
 
-enum OperatingSystem {
+export enum OperatingSystem {
 
     /**
      * Windows
@@ -19,7 +19,7 @@ enum OperatingSystem {
 
 }
 
-namespace OperatingSystem {
+export namespace OperatingSystem {
 
     /**
      * Gets the operating system the machine is running.

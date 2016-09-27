@@ -5,6 +5,7 @@
         "typings/index.d.ts"
     ],
     "compilerOptions": {
+        "module": "commonjs",
         "noImplicitAny": true,
         "target": "es5"
     }
