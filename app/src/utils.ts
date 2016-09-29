@@ -1,4 +1,5 @@
 import os = require('os')
+import fs = require('fs')
 
 export enum OperatingSystem {
 
@@ -30,7 +31,7 @@ export namespace OperatingSystem {
         } else if (os.platform() === 'darwin') {
             return OperatingSystem.MACOS
         } else {
-            return OperatingSystem.LINUX;
+            return OperatingSystem.LINUX
         }
     }
 
@@ -40,11 +41,38 @@ export namespace OperatingSystem {
     export function getMinecraftDataDirectory() {
         switch (OperatingSystem.getOS()) {
             case OperatingSystem.WINDOWS:
-                return process.env['APPDATA'] + '/.minecraft';
+                return process.env['APPDATA'] + '/.minecraft'
             case OperatingSystem.MACOS:
-                return os.homedir() + '/Library/Application Support/minecraft';
+                return os.homedir() + '/Library/Application Support/minecraft'
             default:
-                return os.homedir() + '/minecraft';
+                return os.homedir() + '/minecraft'
+        }
+    }
+
+    /**
+     * Gets the LexLauncher data directory.
+     */
+    export function getLexLauncherDataDirectory() {
+        switch (OperatingSystem.getOS()) {
+            case OperatingSystem.WINDOWS:
+                return process.env['APPDATA'] + '/.lexlauncher'
+            case OperatingSystem.MACOS:
+                return os.homedir() + '/Library/Application Support/lexlauncher'
+            default:
+                return os.homedir() + '/lexlauncher'
+        }
+    }
+
+}
+
+export namespace FileUtils {
+
+    /**
+     * Creates the directory given if it doesn't currently exist.
+     */
+    export function createDirectoryIfNotExists(dir: string) {
+        if (!fs.existsSync(dir)){
+            fs.mkdirSync(dir);
         }
     }
 

@@ -6,7 +6,7 @@ const app           = electron.app,
 
 let mainWindow
 
-app.on('ready', function () {
+function createWindow () {
     // Create main window
     mainWindow = new BrowserWindow({
         width: 1280,
@@ -17,7 +17,9 @@ app.on('ready', function () {
     mainWindow.on('closed', function () {
         mainWindow = null
     })
-})
+}
+
+app.on('ready', createWindow)
 
 app.on('window-all-closed', function () {
     // On OS X it is common for applications and their menu bar
