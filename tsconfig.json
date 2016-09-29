@@ -2,6 +2,7 @@
     "files": [
         "app/src/application.ts",
         "app/src/utils.ts",
+        "app/src/versions.ts",
         "typings/index.d.ts"
     ],
     "compilerOptions": {

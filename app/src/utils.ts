@@ -77,3 +77,11 @@ export namespace FileUtils {
     }
 
 }
+
+export namespace StringUtils {
+
+    export function replaceAll(str: string, find: string, replace: string): string {
+        return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+    }
+
+}
