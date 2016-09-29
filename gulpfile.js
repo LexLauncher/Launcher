@@ -1,8 +1,9 @@
-var gulp  = require('gulp'),
-    pug   = require('gulp-pug'),
-    sass  = require('gulp-sass'),
-    ts    = require('gulp-typescript'),
-    shell = require('gulp-shell')
+var gulp    = require('gulp'),
+    pug     = require('gulp-pug'),
+    sass    = require('gulp-sass'),
+    ts      = require('gulp-typescript'),
+    shell   = require('gulp-shell'),
+    webpack = require('webpack-stream')
 
 var tsProject = ts.createProject('tsconfig.json')
 var path = {
@@ -29,10 +30,16 @@ gulp.task('scss', function () {
         .pipe(gulp.dest('./dist/assets/css'))
 })
 
-gulp.task('compile', function() {
+gulp.task('compile:ts', function() {
     return tsProject.src()
         .pipe(tsProject())
         .js.pipe(gulp.dest('./dist/assets/js'))
+})
+
+gulp.task('compile', ['compile:ts'], function () {
+    return gulp.src('./dist/assets/js/application.js')
+        .pipe(webpack(require('./webpack.config.js')))
+        .pipe(gulp.dest('./dist/assets/js'));
 })
 
 gulp.task('build', ['assets', 'views', 'scss', 'compile'])
