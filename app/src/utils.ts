@@ -41,7 +41,7 @@ export namespace OperatingSystem {
     export function getMinecraftDataDirectory() {
         switch (OperatingSystem.getOS()) {
             case OperatingSystem.WINDOWS:
-                return process.env['APPDATA'] + '/.minecraft'
+                return process.env['APPDATA'] + '\\.minecraft'
             case OperatingSystem.MACOS:
                 return os.homedir() + '/Library/Application Support/minecraft'
             default:
@@ -55,7 +55,7 @@ export namespace OperatingSystem {
     export function getLexLauncherDataDirectory() {
         switch (OperatingSystem.getOS()) {
             case OperatingSystem.WINDOWS:
-                return process.env['APPDATA'] + '/.lexlauncher'
+                return process.env['APPDATA'] + '\\.lexlauncher'
             case OperatingSystem.MACOS:
                 return os.homedir() + '/Library/Application Support/lexlauncher'
             default:
