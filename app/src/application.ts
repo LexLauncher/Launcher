@@ -37,7 +37,6 @@ $(document).ready(function () {
     })
 })
 
-
 function getClasspath(mcVersion: versions.Version, mcJar: string): string {
     var cp: string = ''
     for (var lib in mcVersion.libraries) {

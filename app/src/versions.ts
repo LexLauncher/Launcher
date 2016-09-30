@@ -5,6 +5,11 @@ import fs = require('fs')
 export interface Version {
 
     /**
+     * The version of Minecraft.
+     */
+    id: string
+
+    /**
      * The arguments used to launch Minecraft.
      */
     minecraftArguments: string
